@@ -137,7 +137,7 @@ def signBuild(executablePath):
             '/fd', 'sha256',
             '/f', HF_PFX_FILE,
             '/p', HF_PFX_PASSPHRASE,
-            '/tr', 'http://sha256timestamp.ws.symantec.com/sha256/timestamp',
+            '/tr', 'http://timestamp.digicert.com',
             '/td', 'SHA256',
             executablePath
         ])

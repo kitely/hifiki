@@ -70,7 +70,7 @@ else()
 endif()
 
 # Use default time server if none defined in environment
-set_from_env(TIMESERVER_URL TIMESERVER_URL "http://sha256timestamp.ws.symantec.com/sha256/timestamp")
+set_from_env(TIMESERVER_URL TIMESERVER_URL "http://timestamp.digicert.com")
 
 set(HIFI_USE_OPTIMIZED_IK_OPTION OFF)
 set(BUILD_CLIENT_OPTION ON)
