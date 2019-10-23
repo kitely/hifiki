@@ -206,6 +206,9 @@
         !warning "BYPASS_SIGNING set - installer will not be signed"
       !else
         !system '"@SIGNTOOL_EXECUTABLE@" sign /fd sha256 /f %HF_PFX_FILE% /p %HF_PFX_PASSPHRASE% /tr http://timestamp.digicert.com /td SHA256 $%TEMP%\@UNINSTALLER_NAME@' = 0
+
+        ; Once the real installer is ready, sign it too
+        !finalize '"@SIGNTOOL_EXECUTABLE@" sign /fd sha256 /f %HF_PFX_FILE% /p %HF_PFX_PASSPHRASE% /tr http://timestamp.digicert.com /td SHA256 "%1"'
       !endif
     !endif
 
